@@ -1,0 +1,23 @@
+[
+    {
+        "modelo" : 1,
+        "direccion_mac" : "123.12",
+        "ip" : "123123"
+    },
+    {
+        "modelo" : 2,
+        "direccion_mac" : "456.45",
+        "ip" : "123123"
+    },
+    {
+        "modelo" : 2,
+        "direccion_mac" : "789.23",
+        "ip" : "123123"
+    },
+    {
+        "modelo" : 1,
+        "direccion_mac" : "999.2.23",
+        "ip" : "123123"
+    }
+]
+
