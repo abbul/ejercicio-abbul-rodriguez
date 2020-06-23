@@ -9,6 +9,9 @@ module.exports = {
     direccion_mac: {
       type: 'varchar'
     },
+    ip: {
+      type: 'varchar'
+    },
     is_status: {
       type: 'bool'
     },

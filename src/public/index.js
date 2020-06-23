@@ -1,25 +1,3 @@
-/*
-
-document.getElementById("btn_form").addEventListener('click', (ev)=> {
-
-    const formData = new FormData();
-    const inputFile = document.querySelector("#file_json");
-
-    formData.append('file_json', inputFile.files[0]);
-
-    const init = {
-        method: "POST",
-        body : formData
-    }
-    fetch("/verify-json",init)
-    .then(res => res.json())
-    .catch(err => console.log('err >> ', err))
-    .then(res => {
-        message.innerHTML = res.message
-        console.log('res :>> ', res);
-    })
-})
-*/
 
 document.getElementById('btn_form').addEventListener('click', (ev) => {
   const formData = new FormData()
@@ -29,7 +7,31 @@ document.getElementById('btn_form').addEventListener('click', (ev) => {
   formData.append('maker', document.querySelector('#input_maker').value)
 
   request('/verify-json', 'POST', formData)
-    .then(res => console.log('res >> ', res))
+    .then(res => {
+      if (res.type !== 'success') {
+        if (res.code === 'error_in_structure') {
+          alert(res.body)
+        }
+        return null
+      }
+      const { body: elements } = res
+      elements.forEach((element, i) => {
+        const button = document.createElement('button')
+        button.textContent = 'Agregar'
+        button.id = `btn_${i}`
+        button.addEventListener('click', function () {
+          sendModelo(this)
+        })
+        addRow('tbody', [
+          element.direccion_mac,
+          element.ip,
+          element.modelo,
+          element.version_software,
+          button
+        ])
+      })
+      document.querySelector('#tableJSON').style.display = 'block'
+    })
     .catch(err => console.log('err :>> ', err))
 })
 
@@ -64,4 +66,36 @@ function request (url, method, data) {
         resolve(res)
       })
   })
+}
+
+function addRow (tbodyID, row) {
+  const tbody = document.querySelector(`#${tbodyID}`)
+  const tr = document.createElement('tr')
+
+  row.forEach(column => {
+    const td = document.createElement('td')
+    column instanceof Object ? td.insertAdjacentElement('beforeend', column) : td.textContent = `${column}`
+    tr.insertAdjacentElement('beforeend', td)
+  })
+  tbody.insertAdjacentElement('beforeend', tr)
+}
+
+function sendModelo (element) {
+  const position = element.id.substring(4)
+  const tr = document.querySelector('#tbody').children[position]
+  const data = {
+    direccion_mac: tr.children[0].innerHTML,
+    ip: tr.children[1].innerHTML,
+    modelo: tr.children[2].innerHTML,
+    version_software: tr.children[3].innerHTML
+  }
+  request('/modelo', 'POST', data)
+    .then(res => {
+      deleteRow('tbody', tr)
+    })
+    .catch(err => console.log('err :>> ', err))
+}
+
+function deleteRow (tbodyID, row) {
+  document.querySelector(`#${tbodyID}`).removeChild(row)
 }

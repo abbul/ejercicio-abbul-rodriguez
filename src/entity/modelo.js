@@ -6,9 +6,6 @@ module.exports = {
       type: 'int',
       generated: true
     },
-    ip: {
-      type: 'varchar'
-    },
     nombre: {
       type: 'varchar'
     },

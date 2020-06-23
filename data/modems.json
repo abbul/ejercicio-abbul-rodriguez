@@ -1,7 +1,15 @@
-{
-    "mac_cablemodem" : "asdas",
-    "ip_cablemodem": "asdas",
-    "modelo": "asdas",
-    "version_de_software" : "asdas"
-}
+[
+    {
+        "mac_cablemodem" : "asdas",
+        "ip_cablemodem": "asdas",
+        "modelo": "asdas",
+        "version_de_software" : "asdas"
+    },
+    {
+        "mac_cablemodem" : "asdas",
+        "ip_cablemodem": "asdas",
+        "modelo": "asdas",
+        "version_de_software" : "asdas"
+    }
+]
 
