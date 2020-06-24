@@ -9,7 +9,7 @@
 1. Clonar el projecto : git clone https://github.com/abbul/ejercicio-abbul-rodriguez.git
 2. Crear una base de datos con el nombre de su preferencia.
 3. Copia el archivo llamado ".env.example" que esta dentro del projecto, y renombralo a ".env"
-5. Cargar todas las variables que se encuentran en el archivo ".env". No hace faltar colocar el contenido de las variables entre comillas.
+5. Cargar todas las variables que se encuentran en el archivo ".env". No hace faltar colocar el contenido de las variables entre comillas. Hay variables que ya estan cargadas, las puede modificar si lo desea.
 6. Navegar por la consola hasta el projecto.
 7. Ejecutar en consola : npm i
 8. Ejecutar en consola : npm run dev
