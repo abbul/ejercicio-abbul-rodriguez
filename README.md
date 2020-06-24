@@ -3,9 +3,10 @@
 ### Dependencias:
 - Node.js
 - Mysql
+- Git
 
 ### Paso a paso:
-1. Clonar el projecto
+1. Clonar el projecto : git clone https://github.com/abbul/ejercicio-abbul-rodriguez.git
 2. Crear una base de datos con el nombre de su preferencia.
 3. Crear un archivo llamado ".env" dentro del projecto
 4. Copiar todo el contenido del archivo ".env.example" que esta dentro del projecto
