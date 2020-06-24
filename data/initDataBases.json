@@ -1,0 +1,83 @@
+{
+    "listModelo" : [
+        {
+            "nombre" : "SH-111",
+            "fabricante" : "LG",
+            "version_software" : "11.555",
+            "is_status" : true,
+            "created_at" : "1990-01-01"
+        },
+        {
+            "nombre" : "SH-333",
+            "fabricante" : "LG",
+            "version_software" : "33.7777",
+            "is_status" : true,
+            "created_at" : "1990-01-01"
+        },
+        {
+            "nombre" : "MT-444",
+            "fabricante" : "MOTOROLA",
+            "version_software" : "222.222",
+            "is_status" : true,
+            "created_at" : "1990-02-02"
+        },
+        {
+            "nombre" : "MT-666",
+            "fabricante" : "MOTOROLA",
+            "version_software" : "888.222",
+            "is_status" : true,
+            "created_at" : "1990-02-02"
+        },
+        {
+            "nombre" : "MT-888",
+            "fabricante" : "MOTOROLA",
+            "version_software" : "8",
+            "is_status" : true,
+            "created_at" : "1990-02-02"
+        },
+        {
+            "nombre" : "MT-1010",
+            "fabricante" : "MOTOROLA",
+            "version_software" : "10",
+            "is_status" : true,
+            "created_at" : "1990-02-02"
+        },
+        {
+            "nombre" : "SH-7799",
+            "fabricante" : "LG",
+            "version_software" : "11.555",
+            "is_status" : true,
+            "created_at" : "1990-01-01"
+        }
+    ],
+    "listCableModem" :[
+        {
+            "modelo" : 1,
+            "direccion_mac" : "123.45",
+            "ip" : "789.56.787",
+            "is_status" : true,
+            "created_at" : "1990-01-01"
+        }, 
+        {
+            "modelo" : 2,
+            "direccion_mac" : "695.89",
+            "ip" : "7895.56.217",
+            "is_status" : true,
+            "created_at" : "1990-01-01"
+        },
+        {
+            "modelo" : 3,
+            "direccion_mac" : "322.12",
+            "ip" : "1945.56.532",
+            "is_status" : true,
+            "created_at" : "1990-02-02"
+        },
+        {
+            "modelo" : 4,
+            "direccion_mac" : "365.12",
+            "ip" : "4521.56.000",
+            "is_status" : true,
+            "created_at" : "1990-02-02"
+        }
+    ]
+}

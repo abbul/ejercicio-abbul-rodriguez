@@ -5,6 +5,7 @@ const typeorm = require('typeorm')
 const morgan = require('morgan')
 const homeRouter = require('./routes/homeRoute')
 const { logFile, skipSuccess } = require('./utils/logger')
+const { initDDBB } = require('./utils/initDatabases')
 require('dotenv').config({ path: '.env' })
 
 typeorm.createConnection({
@@ -20,7 +21,7 @@ typeorm.createConnection({
     new typeorm.EntitySchema(require('./entity/modelo'))
   ]
 }).then(async (connection) => {
-  // await connection.manager.query(`TRUNCATE TABLE cable_modem`);
+  await initDDBB(connection)
   app.use(express.urlencoded({ extended: false }))
   app.use(express.json({}))
   app.use(morgan('combined', { stream: logFile, skip: skipSuccess }))

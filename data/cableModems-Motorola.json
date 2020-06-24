@@ -1,0 +1,27 @@
+[
+    {
+        "modelo" : "MT-888",
+        "version_software" : "8",
+        "direccion_mac" : "123.12",
+        "ip" : "123123"
+    }, 
+    {
+        "modelo" : "MT-444",
+        "version_software" : "222.222",
+        "direccion_mac" : "322.12",
+        "ip" : "1945.56.532"
+    },
+    {
+        "modelo" : "MT-666",
+        "version_software" : "888.222",
+        "direccion_mac" : "365.12",
+        "ip" : "4521.56.000"
+    },
+    {
+        "modelo" : "MT-1010",
+        "version_software" : "10",
+        "direccion_mac" : "10",
+        "ip" : "123123"
+    }
+]
+

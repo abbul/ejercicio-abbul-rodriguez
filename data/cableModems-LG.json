@@ -1,0 +1,27 @@
+[
+    {
+        "modelo" : "SH-111",
+        "version_software" : "11.555",
+        "direccion_mac" : "123.45",
+        "ip" : "789.56.787"
+    }, 
+    {
+        "modelo" : "SH-7799",
+        "version_software" : "11.555",
+        "direccion_mac" : "456.45",
+        "ip" : "123123"
+    },
+    {
+        "modelo" : "SH-7799",
+        "version_software" : "11.555",
+        "direccion_mac" : "789.23",
+        "ip" : "785.1254.3"
+    },
+    {
+        "modelo" : "SH-333",
+        "version_software" : "33.7777",
+        "direccion_mac" : "695.89",
+        "ip" : "7895.56.217"
+    }
+]
+
